@@ -32,17 +32,17 @@ public class TestBase {
 	private static final String SCREENSHOT_FOLDER = "target/screenshots/";
 	private static final String SCREENSHOT_FORMAT = ".png";
 
-	protected WebDriver webDriver;
+	protected WebDriver driver;
 
 	protected String gridHubUrl;
 
-	protected String websiteUrl;
+	protected String baseUrl;
 
 	protected Browser browser;
 
 	@BeforeClass
 	public void init() {
-		websiteUrl = PropertyLoader.loadProperty("site.url");
+		baseUrl = PropertyLoader.loadProperty("site.url");
 		gridHubUrl = PropertyLoader.loadProperty("grid2.hub");
 
 		browser = new Browser();
@@ -53,15 +53,15 @@ public class TestBase {
 		String username = PropertyLoader.loadProperty("user.username");
 		String password = PropertyLoader.loadProperty("user.password");
 		
-		webDriver = WebDriverFactory.getInstance(gridHubUrl, browser, username,
+		driver = WebDriverFactory.getInstance(gridHubUrl, browser, username,
 				password);
-		webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 	@AfterSuite(alwaysRun = true)
 	public void tearDown() {
-		if (webDriver != null) {
-			webDriver.quit();
+		if (driver != null) {
+			driver.quit();
 		}
 	}
 
@@ -69,7 +69,7 @@ public class TestBase {
 //	public void setScreenshot(ITestResult result) {
 //		if (!result.isSuccess()) {
 //			try {
-//				WebDriver returned = new Augmenter().augment(webDriver);
+//				WebDriver returned = new Augmenter().augment(driver);
 //				if (returned != null) {
 //					File f = ((TakesScreenshot) returned)
 //							.getScreenshotAs(OutputType.FILE);
