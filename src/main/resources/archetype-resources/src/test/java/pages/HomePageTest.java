@@ -18,8 +18,8 @@ public class HomePageTest extends TestBase {
 	public void testInit(String path) {
 
 		// Load the page in the browser
-		webDriver.get(baseUrl + path);
-		homepage = PageFactory.initElements(webDriver, HomePage.class);
+		driver.get(baseUrl + path);
+		homepage = PageFactory.initElements(driver, HomePage.class);
 	}
 
 	@Test
