@@ -48,6 +48,8 @@ public class WebDriverFactory {
 	public static final String MAC = "mac";
 	public static final String LINUX = "linux";
 
+	private static WebDriver webDriver = null;
+
 	/*
 	 * Factory method to return a RemoteWebDriver instance given the url of the
 	 * Grid hub and a Browser instance.
@@ -145,7 +147,9 @@ public class WebDriverFactory {
 	public static WebDriver getInstance(String browser, String username,
 			String password) {
 
-		WebDriver webDriver = null;
+		if (webDriver != null) {
+			return webDriver;
+		}
 
 		if (CHROME.equals(browser)) {
 			setChromeDriver();
