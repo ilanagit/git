@@ -48,13 +48,6 @@ In the TestBase class, I commented out the method launched after the suite runs 
 funcitonality. (at the moment it's not supported on mobile devices)
 
 
-Adding Chrome Driver to the project
------------------------------------
-
-If you need to use chromedriver, you should put the proper driver file downloaded from http://code.google.com/p/chromium/downloads/list into *src/main/resources/drivers/chrome*. If you are on Windows, the file should be named *chromedriver.exe*,
-if on Unix-based system, the file should be named *chromedriver*.
-
-
 TestNG
 ------
 For more info around TestNG framework, go to http://testng.org/doc/index.html. If you prefer, you could substitute this framework with JUnit.

@@ -156,9 +156,8 @@ public class WebDriverFactory {
 		}
 
 		if (CHROME.equals(browser)) {
-			setChromeDriver();
-
 			webDriver = new ChromeDriver();
+
 		} else if (FIREFOX.equals(browser)) {
 
 			FirefoxProfile ffProfile = new FirefoxProfile();
@@ -238,16 +237,6 @@ public class WebDriverFactory {
 			capability.setVersion(version);
 		}
 		return capability;
-	}
-
-	/*
-	 * Helper method to set ChromeDriver location into the right ststem property
-	 */
-	private static void setChromeDriver() {
-		String os = System.getProperty("os.name").toLowerCase().substring(0, 3);
-		String chromeBinary = "src/main/resources/drivers/chrome/chromedriver"
-				+ (os.equals("win") ? ".exe" : "");
-		System.setProperty("webdriver.chrome.driver", chromeBinary);
 	}
 
 }
