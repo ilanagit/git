@@ -15,6 +15,7 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.iphone.IPhoneDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -38,6 +39,7 @@ public class WebDriverFactory {
 	public static final String OPERA = "opera";
 	public static final String INTERNET_EXPLORER = "ie";
 	public static final String HTML_UNIT = "htmlunit";
+	public static final String SAFARI = "safari";
 	public static final String IPHONE = "iphone";
 
 	/* Platform constants */
@@ -102,6 +104,8 @@ public class WebDriverFactory {
 					true);
 		} else if (OPERA.equals(browserName)) {
 			capability = DesiredCapabilities.opera();
+		} else if (SAFARI.equals(browserName)) {
+			capability = DesiredCapabilities.safari();
 		} else if (ANDROID.equals(browserName)) {
 			capability = DesiredCapabilities.android();
 		} else if (IPHONE.equals(browserName)) {
@@ -172,6 +176,9 @@ public class WebDriverFactory {
 
 		} else if (OPERA.equals(browser)) {
 			webDriver = new OperaDriver();
+
+		} else if (SAFARI.equals(browser)) {
+			webDriver = new Safaririver();
 
 		} else if (IPHONE.equals(browser)) {
 			try {
