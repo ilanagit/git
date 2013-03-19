@@ -177,7 +177,7 @@ public class WebDriverFactory {
 			webDriver = new OperaDriver();
 
 		} else if (SAFARI.equals(browser)) {
-			webDriver = new Safaririver();
+			webDriver = new SafariDriver();
 
 		} else if (IPHONE.equals(browser)) {
 			try {
