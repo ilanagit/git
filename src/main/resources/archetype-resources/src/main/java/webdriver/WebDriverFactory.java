@@ -16,11 +16,13 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.iphone.IPhoneDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.opera.core.systems.OperaDriver;
+
 import ${groupId}.util.Browser;
 import ${groupId}.webdriver.AuthenticatedHtmlUnitDriver;
 
@@ -38,6 +40,7 @@ public class WebDriverFactory {
 	public static final String FIREFOX = "firefox";
 	public static final String OPERA = "opera";
 	public static final String INTERNET_EXPLORER = "ie";
+	public static final String PHANTOMJS = "phantomjs";
 	public static final String HTML_UNIT = "htmlunit";
 	public static final String SAFARI = "safari";
 	public static final String IPHONE = "iphone";
@@ -102,6 +105,8 @@ public class WebDriverFactory {
 			.setCapability(
 					InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,
 					true);
+		} else if (PHANTOMJS.equals(browserName)) {
+			capability = DesiredCapabilities.phantomjs();
 		} else if (OPERA.equals(browserName)) {
 			capability = DesiredCapabilities.opera();
 		} else if (SAFARI.equals(browserName)) {
@@ -178,6 +183,9 @@ public class WebDriverFactory {
 
 		} else if (SAFARI.equals(browser)) {
 			webDriver = new SafariDriver();
+
+		} else if (PHANTOMJS.equals(browser)) {
+			webDriver = new PhantomJSDriver();
 
 		} else if (IPHONE.equals(browser)) {
 			try {

@@ -8,9 +8,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.sebarmeli</groupId>
+	<groupId>ru.st.selenium</groupId>
 	<artifactId>selenium2-java-quickstart-archetype</artifactId>
-	<version>0.4</version>
+	<version>0.5</version>
 	<name>Selenium2 Java QuickStart Archetype</name>
 	<packaging>maven-archetype</packaging>
 	<description>Generates a QuickStart project with Selenium 2 and TestNG</description>
