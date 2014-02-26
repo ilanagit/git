@@ -10,7 +10,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ru.st.selenium</groupId>
 	<artifactId>selenium2-java-quickstart-archetype</artifactId>
-	<version>0.5</version>
+	<version>0.6</version>
 	<name>Selenium2 Java QuickStart Archetype</name>
 	<packaging>maven-archetype</packaging>
 	<description>Generates a QuickStart project with Selenium 2 and TestNG</description>
