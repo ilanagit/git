@@ -8,22 +8,45 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>ru.st.selenium</groupId>
-	<artifactId>selenium2-java-quickstart-archetype</artifactId>
+
+	<groupId>ru.stqa.selenium</groupId>
+	<artifactId>webdriver-java-quickstart-archetype</artifactId>
 	<version>0.6</version>
-	<name>Selenium2 Java QuickStart Archetype</name>
 	<packaging>maven-archetype</packaging>
-	<description>Generates a QuickStart project with Selenium 2 and TestNG</description>
+
+    <name>WebDriver Java QuickStart Archetype</name>
+	<description>Generates a QuickStart project with WebDriver and TestNG</description>
+    <url>https://github.com/barancev/webdriver-java-quickstart-archetype</url>
+
 	<properties>
-		<archetype.version>2.1</archetype.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<archetype.version>2.2</archetype.version>
 	</properties>
+
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
 			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
 		</license>
 	</licenses>
-	<build>
+
+    <scm>
+        <connection>scm:git:https://github.com/barancev/webdriver-java-quickstart-archetype</connection>
+        <developerConnection>scm:git:https://github.com/barancev/webdriver-java-quickstart-archetype</developerConnection>
+        <url>https://github.com/barancev/webdriver-java-quickstart-archetype</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>barancev</id>
+            <name>Alexei Barantsev</name>
+            <roles>
+                <role>Owner</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <build>
 		<extensions>
 			<extension>
 				<groupId>org.apache.maven.archetype</groupId>
@@ -41,4 +64,15 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+    </distributionManagement>
 </project>
