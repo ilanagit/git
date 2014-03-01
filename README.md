@@ -1,19 +1,17 @@
 Introduction
 ============
 
-This archetype generates a small Maven project with Selenium 2 and TestNG embedded to make it easy to get started testing with Selenium Web Driver.
-
-This project provides just a starting point to get up to speed with Selenium 2 infrastructure.
+This archetype generates a small Maven project with Selenium WebDriver and TestNG embedded to make it easy to get started developing tests with Selenium WebDriver.
 
 To install the archetype in your local repo:
 
-	git clone git://github.com/barancev/Selenium2-Java-QuickStart-Archetype.git
-	cd Selenium2-Java-Quickstart-Archetype
+	git clone git://github.com/barancev/webdriver-java-quickstart-archetype.git
+	cd webdriver-java-quickstart-archetype
 	mvn install
 
 Now, you can use the archetype in a new project typing:
 
-    mvn archetype:generate -DarchetypeGroupId=ru.st.selenium -DarchetypeArtifactId=selenium2-java-quickstart-archetype -DarchetypeVersion=0.6 -DgroupId=<mygroupId> -DartifactId=<myartifactId>
+    mvn archetype:generate -DarchetypeGroupId=ru.stqa.selenium -DarchetypeArtifactId=webdriver-java-quickstart-archetype -DarchetypeVersion=0.7 -DgroupId=<mygroupId> -DartifactId=<myartifactId>
 
 where *mygroupId* : group id of the project you are creating; *myartifactId* : artifact id of the project you are creating
 
@@ -69,4 +67,4 @@ The project is just a starting point, feel free to modify it according to your n
 
 Credits
 -------
-The selenium2-java-quickstart-archetype project is an open source project licensed under the Apache License 2.0.
+The webdriver-java-quickstart-archetype project is an open source project licensed under the Apache License 2.0.
