@@ -111,10 +111,6 @@ public class WebDriverFactory {
 			capability = DesiredCapabilities.opera();
 		} else if (SAFARI.equals(browserName)) {
 			capability = DesiredCapabilities.safari();
-		} else if (ANDROID.equals(browserName)) {
-			capability = DesiredCapabilities.android();
-		} else if (IPHONE.equals(browserName)) {
-			capability = DesiredCapabilities.iphone();
 		} else {
 
 			capability = DesiredCapabilities.htmlUnit();
@@ -186,16 +182,6 @@ public class WebDriverFactory {
 
 		} else if (PHANTOMJS.equals(browser)) {
 			webDriver = new PhantomJSDriver();
-
-		} else if (IPHONE.equals(browser)) {
-			try {
-				webDriver = new IPhoneDriver();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-
-		} else if (ANDROID.equals(browser)) {
-			webDriver = new AndroidDriver();
 
 		} else {
 
