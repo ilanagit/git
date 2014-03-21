@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ru.stqa.selenium</groupId>
-  <artifactId>webdriver-java-testng-archetype</artifactId>
+  <artifactId>webdriver-java-quickstart-archetype</artifactId>
   <version>0.8-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
