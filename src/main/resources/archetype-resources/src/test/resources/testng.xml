@@ -7,7 +7,7 @@
 	<test name="Test1">
 		<parameter name="path" value="/"/>
 		<classes>
-		    <class name="${groupId}.pages.HomePageTest"/>
+		    <class name="${groupId}.HomePageTest"/>
 		</classes>
 	</test>  
 </suite>

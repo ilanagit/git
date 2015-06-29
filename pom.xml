@@ -4,7 +4,7 @@
 
   <groupId>ru.stqa.selenium</groupId>
   <artifactId>webdriver-java-quickstart-archetype</artifactId>
-  <version>0.8-SNAPSHOT</version>
+  <version>0.8</version>
   <packaging>maven-archetype</packaging>
 
   <name>WebDriver Java QuickStart Archetype</name>

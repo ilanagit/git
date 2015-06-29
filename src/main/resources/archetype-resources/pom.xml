@@ -10,42 +10,17 @@
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
-      <version>6.8.8</version>
+      <version>6.9.4</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
-    </dependency>
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>2.43.1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.opera</groupId>
-      <artifactId>operadriver</artifactId>
-      <version>1.5</version>
-    </dependency>
-    <dependency>
-      <groupId>com.github.detro.ghostdriver</groupId>
-      <artifactId>phantomjsdriver</artifactId>
-      <version>1.1.0</version>
-      <exclusions>
-        <exclusion>
-          <groupId>org.seleniumhq.selenium</groupId>
-          <artifactId>selenium-remote-driver</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.seleniumhq.selenium</groupId>
-          <artifactId>selenium-server</artifactId>
-        </exclusion>
-      </exclusions>
+      <version>4.12</version>
     </dependency>
     <dependency>
       <groupId>ru.stqa.selenium</groupId>
       <artifactId>webdriver-factory</artifactId>
-      <version>1.0</version>
+      <version>1.1.46</version>
     </dependency>
   </dependencies>
   <build>
@@ -92,8 +67,8 @@
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url></site.url>
-        <browser.name></browser.name>
+        <site.url>http://localhost/</site.url>
+        <browser.name>firefox</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>
@@ -108,8 +83,8 @@
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url></site.url>
-        <browser.name></browser.name>
+        <site.url>http://devhost/</site.url>
+        <browser.name>firefox</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>
@@ -121,8 +96,8 @@
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url></site.url>
-        <browser.name></browser.name>
+        <site.url>http://testhost/</site.url>
+        <browser.name>firefox</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>
@@ -134,8 +109,8 @@
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url></site.url>
-        <browser.name></browser.name>
+        <site.url>http://prodhost/</site.url>
+        <browser.name>firefox</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>

@@ -11,11 +11,11 @@ To install the archetype in your local repo:
 
 Now, you can use the archetype in a new project typing:
 
-    mvn archetype:generate -DarchetypeGroupId=ru.stqa.selenium -DarchetypeArtifactId=webdriver-java-quickstart-archetype -DarchetypeVersion=0.7 -DgroupId=<mygroupId> -DartifactId=<myartifactId>
+    mvn archetype:generate -DarchetypeGroupId=ru.stqa.selenium -DarchetypeArtifactId=webdriver-java-quickstart-archetype -DarchetypeVersion=0.8 -DgroupId=<mygroupId> -DartifactId=<myartifactId>
 
 where *mygroupId* : group id of the project you are creating; *myartifactId* : artifact id of the project you are creating
 
-It uses Java bindings for Selenium version 2.43.1, OperaDriver version 1.5, PhantomJSDriver 1.1.0 and TestNG version 6.8.8.
+It uses Java bindings for Selenium version 2.46.0, PhantomJSDriver 1.2.1 and TestNG version 6.9.4.
 
 
 Project Structure
@@ -35,7 +35,7 @@ Hudson/Jenkins).
 **TestBase** class provides 30 seconds as interval for polling element from the DOM (implicity wait), and also it takes care of closing the driver when all the tests are executed in the suite. 
 (Feel free to update all this values according to your needs)
 
-**HomePageTest** class (in *src/test/java/pages*) is just an example of a test class for testing the homepage of a web application. This test class accepts the *path* parameter
+**HomePageTest** class (in *src/test/java*) is just an example of a test class for testing the homepage of a web application. This test class accepts the *path* parameter
  (set in *src/test/resources/testng.xml)* defining the path appended to the base URL (in case of the home page, usually just "/"). In the setup method of this class, the **PageFactory** class is used
  to help supporting the **PageObject** pattern (see below for more information). Briefly according to this pattern, each page is an object. *src/main/java/pages/HomePage* class is an example of 
  a class representing the home page. Notice how the constructor accepts the "WebDriver" interface as parameter and all the "services" available for that page should be exposed here. It also allows to
@@ -53,7 +53,7 @@ For more info around TestNG framework, go to http://testng.org/doc/index.html. I
 
 Page Object pattern
 -------------------
-For more info around this pattern, read this wiki page: http://code.google.com/p/selenium/wiki/PageObjects
+For more info around this pattern, read this wiki page: https://github.com/SeleniumHQ/selenium/wiki/PageObjects
 
 
 Integration with SauceLabs

@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${groupId}.pages;
+package ${groupId};
 
 import java.util.concurrent.TimeUnit;
 
@@ -34,9 +34,16 @@ public class TestBase {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setBrowserName(PropertyLoader.loadProperty("browser.name"));
 		capabilities.setVersion(PropertyLoader.loadProperty("browser.version"));
-		capabilities.setPlatform(Platform.valueOf(PropertyLoader.loadProperty("browser.platform")));
+		String platform = PropertyLoader.loadProperty("browser.platform");
+		if (!(null == platform || "".equals(platform))) {
+			capabilities.setPlatform(Platform.valueOf(PropertyLoader.loadProperty("browser.platform")));
+		}
 
-		driver = WebDriverFactory.getDriver(gridHubUrl, capabilities);
+		if (!(null == gridHubUrl || "".equals(gridHubUrl))) {
+			driver = WebDriverFactory.getDriver(gridHubUrl, capabilities);
+		} else {
+			driver = WebDriverFactory.getDriver(capabilities);
+		}
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
