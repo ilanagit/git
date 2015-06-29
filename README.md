@@ -15,7 +15,7 @@ Now, you can use the archetype in a new project typing:
 
 where *mygroupId* : group id of the project you are creating; *myartifactId* : artifact id of the project you are creating
 
-It uses Java bindings for Selenium version 2.40.0, OperaDriver version 1.5, PhantomJSDriver 1.1.0 and TestNG version 6.8.8.
+It uses Java bindings for Selenium version 2.43.1, OperaDriver version 1.5, PhantomJSDriver 1.1.0 and TestNG version 6.8.8.
 
 
 Project Structure
