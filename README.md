@@ -1,4 +1,4 @@
-Introduction (edited)
+Introduction
 ============
 
 This archetype generates a small Maven project with Selenium WebDriver and TestNG embedded to make it easy to get started developing tests with Selenium WebDriver.
